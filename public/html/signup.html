@@ -9,13 +9,14 @@
     <!-- Include Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/signup.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
 
 </head>
 <body>
     <div class="container mt-5">
         <div class="signup-container">
             <h2 class="text-center">Sign Up</h2>
-            <form>
+            <form onsubmit="postNewUserData(event)">
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -42,7 +43,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
             </form>
-            <p id="login">Have an account ? <a href="../html/login.html">login</a></p>
+            <p id="login">Have an account ? <a href="/login">login</a></p>
         </div>
     </div>
 
@@ -50,5 +51,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- main script -->
+    <script src="/js/signup.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
+const cookieParser=require('cookie-parser');
 
 //database:
 const database = require('./util/database');
@@ -17,6 +18,7 @@ const app = express();
 
 //common middlewares:
 app.use(cors());
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -30,12 +32,14 @@ app.use(userRoutes);
 User.hasMany(Todo);
 Todo.belongsTo(User);
 
+
+//server:
 database
 .sync()
     .then(() => {
 
-        app.listen(3000, () => {
-            console.log('app is running on port 3000')
+        app.listen(80, () => {
+            console.log('app is running on port 800')
         });
     })
 

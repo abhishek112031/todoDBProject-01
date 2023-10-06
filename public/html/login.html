@@ -8,62 +8,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Include Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        /* Custom CSS for the login page */
-        body {
-            background-color: #0D2538; /* Dark Blue Background */
-            color: #fff; /* Text color */
-        }
-        .login-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7); /* Dark Blue Semi-transparent Background */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* White Box Shadow */
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .input-group {
-            position: relative;
-        }
-        .input-group-prepend .input-group-text {
-            background-color: rgba(255, 255, 255, 0.1); /* Light Blue Input Background */
-            color: #fff; /* Input Text Color */
-            border: none;
-            border-bottom: 2px solid #007BFF; /* Blue Bottom Border */
-            border-radius: 0;
-        }
-        .form-control {
-            background-color: rgba(255, 255, 255, 0.1); /* Light Blue Input Background */
-            color: #fff; /* Input Text Color */
-            border: none;
-            border-radius: 25px; /* Rounded Corners */
-            border-left: none;
-        }
-        .form-control:focus {
-            background-color: rgba(255, 255, 255, 0.2); /* Lighter Blue Input Background on Focus */
-            border-bottom: 2px solid #0056b3; /* Darker Blue Bottom Border on Focus */
-            box-shadow: none;
-            outline: none;
-            color: #fff;
-        }
-        .btn-primary {
-            background-color: #007BFF; /* Blue Button Background */
-            border: none;
-            border-radius: 25px;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3; /* Darker Blue Button Background on Hover */
-        }
-    </style>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+   
 </head>
 <body>
     <div class="container mt-5">
         <div class="login-container">
             <h2 class="text-center">Login</h2>
-            <form>
+            <form onsubmit="postUserData(event)">
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -82,7 +35,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
-            <p id="login">Do not have an account ? <a href="../html/signup.html">signup</a></p>
+            <p id="login">Do not have an account ? <a href="/sign-up">signup</a></p>
         </div>
     </div>
 
@@ -90,5 +43,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="/js/login.js"></script>
 </body>
 </html>
